@@ -3,7 +3,7 @@
 $error.clear()
 
 # Provide the name of the user - Can copy and paste from CAD form to avoid typing mistakes
-$ticketref = Read-host "P{lease enter the ticket reference for this account deletion"
+$ticketref = Read-host "Please enter the ticket reference for this account deletion"
 
 $fname = Read-Host "Please provide the users first name"
 $lname = Read-Host "Please provide the users last name"

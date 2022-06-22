@@ -37,7 +37,7 @@ If ($PathFound -ne "TRUE") {
 # user is a member of. Eventually it will contain all of the data from the user account.
 $date = Get-Date -UFormat "%Y-%m-%d"
 $LogFile = ("$PathFound" + $username.displayname + ".$date.log")
-echo "########## Connectwise manage ticket reference ##########" >> $logfile
+echo "########## CW Ticket Reference ##########" >> $logfile
 echo $ticketref >> $LogFile
 
 
@@ -275,7 +275,6 @@ for ($i=0; $i -lt $licenses.count; $i++ )
 
  if ( $licenses -contains "SPE_E3") { echo "Microsoft 365 E3 was assigned" >> $logfile}
  if ( $licenses -contains "FLOW_FREE") { echo "MICROSOFT FLOW FREE was assigned" >> $logfile }
- if ( $licenses -contains "SPE_E3") { echo "MICROSOFT 365 PHONE SYSTEM was assigned" >> $logfile }
  if ( $licenses -contains "ADV_COMMS") { echo "Advanced Communications was assigned" >> $logfile }
  if ( $licenses -contains "CDSAICAPACITY") { echo "AI Builder Capacity add-on was assigned" >> $logfile }
  if ( $licenses -contains "SPZA_IW") { echo "APP CONNECT IW was assigned" >> $logfile }
@@ -328,7 +327,7 @@ If ($PathFound -ne "TRUE") {
 # This variable will be used to create CSV file that contains a list of all of the groups that this 
 # user is a member of. Eventually it will contain all of the data from the user account.
 $date = Get-Date -UFormat "%Y-%m-%d"
-$LogFile = ("$PathFound" + $username.displayname + ".$date.log")
+$LogFile = ("$PathFound" + $username.displayname + "$ticketRef" + ".$date.log")
 
 }
 
